@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fullstack movie app</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    </head>
+  <script>
+  $(document).ready(function () {
+    // Plan:
+    // Create fixed navbar
+    // Navbar appears only the user scrolls up
+  
+    var beforeScroll = 0;
+    var afterScroll;
+    var $navbar = $('.navbar');
+  
+  
+  
+  
+    // find current position
+    $(window).on("scroll", function () {
+  
+      // Calculate updated scroll position
+      afterScroll = $(this).scrollTop();
+  
+      // Compare before and after scroll
+  
+      // if scrolling is quick and less then -10
+      if (beforeScroll < afterScroll) { // user is scrolling down $navbar.removeClass('slideDown').addClass('slideUp'); } else
+        if (beforeScroll > afterScroll) {
+          // user is scrolling up
+          $navbar.removeClass('slideUp').addClass('slideDown');
+        }
+  
+  
+        // Reset beforeScroll to afterScroll position
+  
+        beforeScroll = afterScroll;
+      }
+  
+    });
+  });
+  </script>
+    
+    <body>
+      <header class="header">
+        <nav>
+
+      <section class="navbar">
+        <h1 class="logo">Get a new Flick</h1>
+
+        <form id="form">
+          <input type="text" id="search" class="search" placeholder="Search">
+        </form>
+      </section>
+    </nav>
+  </header>
+  <main id="main"></main>
+  <script type="text/javascript" src="/js/animation.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+  
+  </body>
+  
+
+</html>
