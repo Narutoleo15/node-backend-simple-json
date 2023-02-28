@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     });
   }
   else if (page == '/page/otherpage') {
-    fs.readFile('otherpage.html', function (err, data) {
+    fs.readFile('/potherpage.html', function (err, data) {
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.write(data);
       res.end();
