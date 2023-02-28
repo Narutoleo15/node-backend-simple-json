@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "figlet": "^1.5.2",
-    "jquery": "^3.6.3"
+    "jquery": "^3.6.3",
+    "nodemon": "^2.0.20"
   },
   "scripts": {
     "start": "node server.js"
@@ -9,7 +10,6 @@
   "name": "backend-simple-json",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Narutoleo15/node-backend-simple-json.git"
